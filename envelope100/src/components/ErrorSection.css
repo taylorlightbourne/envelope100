@@ -9,7 +9,7 @@
     line-height: 5rem;
 }
 .error__btn {
-    background-color:  rgb(2, 2, 66);
+    background-color: #006D77;
     color: white;
     padding: 12px 26px;
     font-size: 20px;
@@ -22,7 +22,7 @@
 }
 .error__btn:hover {
     background-color: white;
-    border: 1px solid  rgb(2, 2, 66) ;
-    color:  rgb(2, 2, 66);
+    border: 1px solid #006D77 ;
+    color: #006D77;
     transition: all 0.3s ease-out;
 }

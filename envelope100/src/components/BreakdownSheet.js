@@ -1,5 +1,6 @@
 import BinderItem from "./Budgeting/BinderItem";
 import EnvelopeItem from "./Budgeting/EnvelopeItem";
+import "./BreakdownSheet.css";
 
 function BreakdownSheet() {
     const binder = [
@@ -44,25 +45,29 @@ function BreakdownSheet() {
       ];
     return (
         <div className="breakdown-main-container">
-                <div className="breakdown-main-contents">
-                    <div className="header">
-                        <h1>Amount Breakdown</h1>
-                    </div>
-                    <br></br>
-                    <div>
-                        <h1>"Binder Name"</h1>
-                        <div>
-                            <BinderItem title={binder[0].title} />
-                        </div>
-                        <div>
-                            <EnvelopeItem
-                            name={envelope[0].name}
-                            />
-                            <input></input>
-                        </div>
-                    </div>
+            <div className="header">
+                <h1>Amount Breakdown</h1>
+            </div>
+            <div className="binders-and-envelopes">
+                <div>
+                    <BinderItem title={binder[0].title} />
+                </div>
+                <div id="envelope-amounts">
+                    <EnvelopeItem name={envelope[0].name} />
+                    <input className="breakdown-input-amount"></input>
                 </div>
             </div>
+            <br></br>
+            <div className="breakdown-cash-request">
+                <button id="breakdown-links">Cash Breakdown Request</button>
+            </div>
+            <br></br>
+            <div className="breakdown-tobinder-buttons">
+                <button id="breakdown-links">Auto Add to Binders</button>
+                <br></br>
+                <button id="breakdown-links">Manually Add to Binders</button>
+            </div>
+        </div>
     )
 }
 

@@ -28,7 +28,7 @@ function Navbar() {
         <div>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to ="/" className="navbar-logo" onClick={closeMobileMenu}>
+                    <Link to ="/home" className="navbar-logo" onClick={closeMobileMenu}>
                         <img src={logo} alt="Logo" width="50px" height="50px" />
                     </Link>
                     <div className="menu-icon" onClick={handleClick}>
@@ -60,7 +60,11 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
-                    {button && <button buttonStyle='btn--outline'>Search</button>}
+                    <Link to="/binders">
+                    {button && <button className="binder-btn" type="button">
+                        Binders
+                    </button>}
+                    </Link>
                 </div>
             </nav>
         </div>
